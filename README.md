@@ -1,5 +1,8 @@
 # BooksTestApp
 
+[Fulcrum Angular test task.pdf](https://github.com/user-attachments/files/32803267/Fulcrum.Angular.test.task.pdf)
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.10.
 
 ## Development server
