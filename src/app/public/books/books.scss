@@ -1,0 +1,19 @@
+.table-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.add-book-button {
+    align-self: flex-start;
+    width: fit-content;
+}
+
+.mat-column-actions {
+    text-align: right;
+}

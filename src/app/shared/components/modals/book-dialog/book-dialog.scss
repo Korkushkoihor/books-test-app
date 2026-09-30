@@ -1,0 +1,22 @@
+:host {
+	display: block;
+
+    form {
+        width: 100%;
+    }
+
+    .book-dialog-content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+
+    mat-dialog-actions {
+        gap: 8px;
+    }
+
+}

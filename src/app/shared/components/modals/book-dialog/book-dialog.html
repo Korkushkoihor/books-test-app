@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>{{ data?.id === undefined ? 'Add book' : 'Edit book' }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content class="book-dialog-content">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Pages</mat-label>
+      <input matInput type="number" formControlName="pages" required>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button matButton="filled" type="submit" [disabled]="form.invalid">Save</button>
+    <button matButton="outlined" type="button" (click)="onCancel()">Cancel</button>
+  </mat-dialog-actions>
+</form>

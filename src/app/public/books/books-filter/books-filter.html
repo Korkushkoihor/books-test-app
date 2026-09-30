@@ -1,0 +1,23 @@
+<div class="filters-container">
+    <mat-form-field appearance="outline">
+        <mat-label>Filter by title</mat-label>
+        <input matInput [formControl]="searchControl" placeholder="Ex. The Great Gatsby">
+    </mat-form-field>
+    
+    <div class="buttons-holder">
+        <input #xmlFileInput type="file" accept=".xml,application/xml,text/xml" hidden (change)="onImportFileChange($event)">
+       
+        @if (selectedBooks().length > 0) {
+            <button matIconButton (click)="deleteSelectedBooksChange.emit()" matTooltip="Delete selected books">
+                <mat-icon>delete</mat-icon>
+            </button>
+        }
+        @if (selectedBooks().length > 0) {
+            <button matIconButton (click)="exportXmlChange.emit()" matTooltip="Export to XML">
+                <mat-icon>download</mat-icon>
+            </button>
+        }
+        <button class="import-xml-button" matButton="outlined" (click)="xmlFileInput.click()">Import XML</button>
+        <button class="add-book-button" matButton="filled" (click)="openAddBookDialogChange.emit()">Add Book</button>
+    </div>
+</div>
